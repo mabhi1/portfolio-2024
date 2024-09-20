@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Menu } from "@/components/layout/menu";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className={cn("rounded-md flex flex-col md:flex-row w-full flex-1 border overflow-hidden", "h-screen")}>
+          <Menu />
+          <main className="p-5 w-full">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
