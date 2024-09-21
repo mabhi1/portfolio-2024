@@ -8,7 +8,7 @@ export default function Home() {
   const words = ["Full Stack Engineer", "Software Developer", "Enthusiastic programmer"];
   return (
     <BackgroundBeamsWithCollision>
-      <div className="mx-auto w-fit flex gap-20 items-center mt-20">
+      <div className="mx-auto w-fit flex gap-20 items-center">
         <div>
           <div className="flex gap-2 items-center">
             <div className="flex flex-col gap-2">
@@ -36,7 +36,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <Image src="/profile.png" height={250} width={250} alt="Abhishek Mishra" />
+        <Image src="/profile.png" height={270} width={270} alt="Abhishek Mishra" />
       </div>
     </BackgroundBeamsWithCollision>
   );

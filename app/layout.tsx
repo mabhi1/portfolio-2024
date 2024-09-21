@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Menu } from "@/components/layout/menu";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <div className={cn("rounded-md flex flex-col md:flex-row w-full flex-1 border overflow-hidden", "h-screen")}>
-          <Menu />
-          <main className="p-5 w-full">{children}</main>
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className={cn("rounded-md flex flex-col md:flex-row w-full flex-1 border overflow-hidden", "h-screen")}>
+            <Menu />
+            <main className="w-full max-w-7xl mx-auto px-10 text-sm flex flex-col">
+              {children}
+              <Footer />
+            </main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

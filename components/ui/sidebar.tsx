@@ -17,6 +17,7 @@ interface SidebarContextProps {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   animate: boolean;
+  pin: boolean;
 }
 
 const SidebarContext = createContext<SidebarContextProps | undefined>(undefined);
@@ -32,6 +33,7 @@ export const useSidebar = () => {
 export const SidebarProvider = ({
   children,
   open: openProp,
+  pin,
   setOpen: setOpenProp,
   animate = true,
 }: {
@@ -39,13 +41,14 @@ export const SidebarProvider = ({
   open?: boolean;
   setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   animate?: boolean;
+  pin: boolean;
 }) => {
   const [openState, setOpenState] = useState(false);
 
   const open = openProp !== undefined ? openProp : openState;
   const setOpen = setOpenProp !== undefined ? setOpenProp : setOpenState;
 
-  return <SidebarContext.Provider value={{ open, setOpen, animate: animate }}>{children}</SidebarContext.Provider>;
+  return <SidebarContext.Provider value={{ open, setOpen, animate: animate, pin }}>{children}</SidebarContext.Provider>;
 };
 
 export const Sidebar = ({
@@ -53,14 +56,16 @@ export const Sidebar = ({
   open,
   setOpen,
   animate,
+  pin,
 }: {
   children: React.ReactNode;
   open?: boolean;
   setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   animate?: boolean;
+  pin: boolean;
 }) => {
   return (
-    <SidebarProvider open={open} setOpen={setOpen} animate={animate}>
+    <SidebarProvider open={open} setOpen={setOpen} animate={animate} pin={pin}>
       {children}
     </SidebarProvider>
   );
@@ -76,19 +81,25 @@ export const SidebarBody = (props: React.ComponentProps<typeof motion.div>) => {
 };
 
 export const DesktopSidebar = ({ className, children, ...props }: React.ComponentProps<typeof motion.div>) => {
-  const { open, setOpen, animate } = useSidebar();
+  const { open, setOpen, animate, pin } = useSidebar();
   return (
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[300px] flex-shrink-0",
+          "h-full px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[250px] flex-shrink-0",
           className
         )}
         animate={{
           width: animate ? (open ? "250px" : "60px") : "250px",
         }}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        onMouseEnter={() => {
+          if (pin) return;
+          setOpen(true);
+        }}
+        onMouseLeave={() => {
+          if (pin) return;
+          setOpen(false);
+        }}
         {...props}
       >
         {children}
@@ -108,6 +119,7 @@ export const MobileSidebar = ({ className, children, ...props }: React.Component
         {...props}
       >
         <div className="flex justify-end z-20 w-full">
+          <div className="mr-auto">Portfolio</div>
           <IconMenu2 onClick={() => setOpen(!open)} />
         </div>
         <AnimatePresence>
@@ -125,7 +137,7 @@ export const MobileSidebar = ({ className, children, ...props }: React.Component
                 className
               )}
             >
-              <div className="absolute right-10 top-10 z-50" onClick={() => setOpen(!open)}>
+              <div className="absolute right-3 top-2 z-50" onClick={() => setOpen(!open)}>
                 <IconX />
               </div>
               {children}

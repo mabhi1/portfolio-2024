@@ -12,13 +12,8 @@ export const routes = [
     icon: IconCode,
   },
   {
-    label: "Education",
-    href: "/education",
-    icon: IconSchool,
-  },
-  {
-    label: "Work",
-    href: "/work",
+    label: "Qualification",
+    href: "/qualification",
     icon: IconCertificate,
   },
   {
