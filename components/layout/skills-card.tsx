@@ -3,6 +3,10 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/components/hooks/use-outside-click";
+import LanguagesCard from "./languages-card";
+import DatabasesCard from "./databases-card";
+import WebTechCard from "./web-tech-card";
+import FrameworksCard from "./frameworks-card";
 
 export function SkillsCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(null);
@@ -36,7 +40,7 @@ export function SkillsCard() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 h-full w-full z-10"
+            className="fixed inset-0 bg-black/20 backdrop-blur h-full w-full z-10"
           />
         )}
       </AnimatePresence>
@@ -66,41 +70,39 @@ export function SkillsCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-7xl h-fit flex flex-row gap-10 p-5 bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`} className="flex justify-center pt-5">
-                <Image
-                  priority
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="h-64 w-auto sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-              </motion.div>
-
-              <div>
+              <div className="flex flex-col justify-center items-center">
+                <motion.div layoutId={`image-${active.title}-${id}`} className="flex items-center">
+                  <Image
+                    priority
+                    width={200}
+                    height={200}
+                    src={active.src}
+                    alt={active.title}
+                    className="h-72 w-auto sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  />
+                </motion.div>
                 <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
-                    >
-                      {active.title}
-                    </motion.h3>
-                  </div>
-                </div>
-                <div className="pt-4 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                  <motion.h3
+                    layoutId={`title-${active.title}-${id}`}
+                    className="font-medium text-neutral-700 dark:text-neutral-200 text-xl"
                   >
-                    {typeof active.content === "function" ? active.content() : active.content}
-                  </motion.div>
+                    {active.title}
+                  </motion.h3>
                 </div>
+              </div>
+
+              <div className="p-5 flex-1">
+                <motion.div
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                >
+                  {typeof active.content === "function" ? active.content() : active.content}
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -175,67 +177,47 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    title: "Languages",
-    src: "/technologies/languages.png",
+    title: "Programming Languages",
+    src: "/languages.png",
     content: () => {
       return (
-        <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for her melancholic and cinematic music
-          style. Born Elizabeth Woolridge Grant in New York City, she has captivated audiences worldwide with her
-          haunting voice and introspective lyrics. <br /> <br /> Her songs often explore themes of tragic romance,
-          glamour, and melancholia, drawing inspiration from both contemporary and vintage pop culture. With a career
-          that has seen numerous critically acclaimed albums, Lana Del Rey has established herself as a unique and
-          influential figure in the music industry, earning a dedicated fan base and numerous accolades.
-        </p>
+        <div className="h-96 overflow-y-auto">
+          <LanguagesCard />
+        </div>
       );
     },
   },
   {
     title: "Databases",
-    src: "/technologies/databases.png",
+    src: "/databases.png",
     content: () => {
       return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful voice and profound lyrics that resonate
-          deeply with his audience. Born in the village of Khant Maanpur in Punjab, India, he has become a cultural icon
-          in the Punjabi music industry. <br /> <br /> His songs often reflect the struggles and triumphs of everyday
-          life, capturing the essence of Punjabi culture and traditions. With a career spanning over two decades, Babu
-          Maan has released numerous hit albums and singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
+        <div className="h-96 overflow-y-auto">
+          <DatabasesCard />
+        </div>
       );
     },
   },
 
   {
-    title: "Back End",
-    src: "/technologies/backend.webp",
+    title: "Web Technologies",
+    src: "/web-tech.png",
     content: () => {
       return (
-        <p>
-          Metallica, an iconic American heavy metal band, is renowned for their powerful sound and intense performances
-          that resonate deeply with their audience. Formed in Los Angeles, California, they have become a cultural icon
-          in the heavy metal music industry. <br /> <br /> Their songs often reflect themes of aggression, social
-          issues, and personal struggles, capturing the essence of the heavy metal genre. With a career spanning over
-          four decades, Metallica has released numerous hit albums and singles that have garnered them a massive fan
-          following both in the United States and abroad.
-        </p>
+        <div className="h-96 overflow-y-auto">
+          <WebTechCard />
+        </div>
       );
     },
   },
   {
-    title: "Front End",
-    src: "/technologies/frontend.png",
+    title: "Frameworks and Tools",
+    src: "/framework.webp",
     content: () => {
       return (
-        <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and actor, is celebrated for his distinctive
-          voice and innovative compositions. Born in Mumbai, India, he has become a prominent figure in the Bollywood
-          music industry. <br /> <br /> His songs often feature a blend of contemporary and traditional Indian music,
-          capturing the essence of modern Bollywood soundtracks. With a career spanning over two decades, Himesh
-          Reshammiya has released numerous hit albums and singles that have garnered him a massive fan following both in
-          India and abroad.
-        </p>
+        <div className="h-96 overflow-y-auto">
+          <FrameworksCard />
+        </div>
       );
     },
   },

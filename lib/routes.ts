@@ -1,10 +1,10 @@
-import { IconCertificate, IconInfoCircle, IconSchool, IconCode, IconBooks, IconAddressBook } from "@tabler/icons-react";
+import { IconCertificate, IconCode, IconBooks, IconAddressBook, IconLicense } from "@tabler/icons-react";
 
 export const routes = [
   {
     label: "About",
     href: "/",
-    icon: IconInfoCircle,
+    icon: IconLicense,
   },
   {
     label: "Skills",
@@ -12,8 +12,8 @@ export const routes = [
     icon: IconCode,
   },
   {
-    label: "Qualification",
-    href: "/qualification",
+    label: "Qualifications",
+    href: "/qualifications",
     icon: IconCertificate,
   },
   {

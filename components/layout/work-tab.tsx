@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Separator } from "../ui/separator";
 
 function WorkTab() {
   return (
@@ -23,7 +22,7 @@ function WorkTab() {
           <li>Monitored user interactions using analytics events</li>
         </ul>
       </div>
-      <Separator />
+      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       <div className="space-y-2">
         <div className="flex gap-3 items-center">
           <Image src="/qualification/protek.jpeg" width={50} height={50} alt="Pro-Tek" className="rounded-full" />
@@ -43,7 +42,7 @@ function WorkTab() {
           <li> Implemented unit testing using Jest and RTL and authentication using Firebase</li>
         </ul>
       </div>
-      <Separator />
+      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       <div className="space-y-2">
         <div className="flex gap-3 items-center">
           <Image src="/qualification/stevens.gif" width={50} height={50} alt="Stevens" />
@@ -58,7 +57,7 @@ function WorkTab() {
           <li>Handled homework and exam paper grading, and coursework structuring</li>
         </ul>
       </div>
-      <Separator />
+      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       <div className="space-y-2">
         <div className="flex gap-3 items-center">
           <Image src="/qualification/compitek.png" width={50} height={50} alt="Compitek" className="rounded-full" />

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "next/link";
 import React, { useState, createContext, useContext, ForwardRefExoticComponent, RefAttributes } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Icon, IconMenu2, IconProps, IconX } from "@tabler/icons-react";
+import { Icon, IconFileText, IconMenu2, IconProps, IconX } from "@tabler/icons-react";
 
 interface Links {
   label: string;
@@ -86,11 +86,11 @@ export const DesktopSidebar = ({ className, children, ...props }: React.Componen
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[250px] flex-shrink-0",
+          "h-full px-4 py-4 hidden md:flex md:flex-col bg-gradient-to-r from-blue-900 to-white from-2% to-98% dark:from-neutral-800 dark:to-neutral-800 text-white w-[300px] flex-shrink-0",
           className
         )}
         animate={{
-          width: animate ? (open ? "250px" : "60px") : "250px",
+          width: animate ? (open ? "300px" : "60px") : "300px",
         }}
         onMouseEnter={() => {
           if (pin) return;
@@ -114,7 +114,7 @@ export const MobileSidebar = ({ className, children, ...props }: React.Component
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
+          "h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
         )}
         {...props}
       >
@@ -168,5 +168,23 @@ export const SidebarLink = ({ link, className, ...props }: { link: Links; classN
         {link.label}
       </motion.span>
     </Link>
+  );
+};
+
+export const ResumeLink = ({ className }: { className?: string }) => {
+  const { open, animate } = useSidebar();
+  return (
+    <div className={cn("flex items-center justify-start gap-2 group/sidebar py-2 cursor-pointer", className)}>
+      <IconFileText className="h-5 w-5 flex-shrink-0" />
+      <motion.span
+        animate={{
+          display: animate ? (open ? "inline-block" : "none") : "inline-block",
+          opacity: animate ? (open ? 1 : 0) : 1,
+        }}
+        className="text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+      >
+        Resume
+      </motion.span>
+    </div>
   );
 };

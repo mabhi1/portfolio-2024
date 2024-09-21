@@ -1,6 +1,5 @@
 import { IconBook2, IconCalendar } from "@tabler/icons-react";
 import Image from "next/image";
-import { Separator } from "../ui/separator";
 
 function EducationTab() {
   return (
@@ -22,7 +21,7 @@ function EducationTab() {
           2013 - 2017
         </div>
       </div>
-      <Separator />
+      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       <div className="space-y-2">
         <div className="flex gap-3 items-end">
           <Image src="/qualification/stevens.gif" width={50} height={50} alt="Stevens" />

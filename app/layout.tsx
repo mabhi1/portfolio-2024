@@ -5,6 +5,7 @@ import { Menu } from "@/components/layout/menu";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Footer from "@/components/layout/footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +23,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className={cn("rounded-md flex flex-col md:flex-row w-full flex-1 border overflow-hidden", "h-screen")}>
+          <div className={cn("flex flex-col md:flex-row w-full flex-1 overflow-hidden", "h-screen")}>
             <Menu />
             <main className="w-full max-w-7xl mx-auto px-10 text-sm flex flex-col">
               {children}
               <Footer />
             </main>
           </div>
+          <Toaster closeButton richColors position="top-right" />
         </ThemeProvider>
       </body>
     </html>
