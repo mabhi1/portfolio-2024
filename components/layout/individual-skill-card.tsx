@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function IndividualSkillCard({ skills }: { skills: { name: string; src: string }[] }) {
   return (
-    <div className="grid grid-cols-5 w-[47rem] gap-2">
+    <div className="grid grid-cols-2 md:grid-cols-5 w-fit md:w-[47rem] gap-2">
       {skills.map((skill) => (
         <div
           key={skill.name}

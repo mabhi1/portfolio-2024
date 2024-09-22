@@ -140,7 +140,7 @@ export const MobileSidebar = ({ className, children, ...props }: React.Component
               <div className="absolute right-3 top-2 z-50" onClick={() => setOpen(!open)}>
                 <IconX />
               </div>
-              {children}
+              <div onClick={() => setOpen(false)}>{children}</div>
             </motion.div>
           )}
         </AnimatePresence>

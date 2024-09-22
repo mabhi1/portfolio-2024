@@ -9,9 +9,9 @@ export default function Home() {
   const words = ["Full Stack Engineer", "Software Developer", "Enthusiastic programmer"];
   return (
     <BackgroundBeamsWithCollision>
-      <div className="mx-auto w-fit flex gap-20 items-center">
-        <div>
-          <div className="flex gap-2 items-center">
+      <div className="mx-auto w-fit flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 items-center">
+        <div className="flex flex-col items-center lg:items-start">
+          <div className="flex gap-2 items-center justify-center w-full lg:w-auto px-8 lg:px-0">
             <div className="flex flex-col gap-2">
               <a href="https://github.com/mabhi1">
                 <IconBrandGithub className="w-7 h-7" />
@@ -22,7 +22,7 @@ export default function Home() {
             </div>
             <div>
               <div className="px-2 text-xl">Hello, my name is</div>
-              <div className="text-5xl px-2">Abhishek Mishra</div>
+              <div className="text-3xl lg:text-5xl px-2">Abhishek Mishra</div>
               <FlipWords words={words} />
             </div>
           </div>

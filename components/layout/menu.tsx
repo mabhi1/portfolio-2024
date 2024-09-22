@@ -52,13 +52,12 @@ export const Logo = ({
   return (
     <div className="flex justify-between items-center gap-5">
       <Link href="/" className="font-normal flex space-x-2 items-center text-xl uppercase py-1 relative z-20">
-        {/* <div className="h-5 w-6 bg-primary rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" /> */}
         <Image src="/logo.webp" alt="Portfolio" height={30} width={30} />
         <motion.span className="whitespace-pre">Portfolio</motion.span>
       </Link>
       <div className="flex gap-1">
         <Button
-          className="ml-auto text-foreground"
+          className="ml-auto text-foreground hidden md:inline-flex"
           variant="outline"
           size="icon"
           onClick={() => {

@@ -14,8 +14,10 @@ function EducationTab() {
         </div>
         <div className="flex items-center gap-2">
           <IconBook2 className="w-4 h-4" />
-          Courses - Web Programming (Back-End), Distributed Systems and cloud computing DBMS, Web Programming 2
-          (Front-End), Mobile systems and applications, Algorithms
+          <div className="w-fit">
+            Courses - Web Programming (Back-End), Distributed Systems and cloud computing DBMS, Web Programming 2
+            (Front-End), Mobile systems and applications, Algorithms
+          </div>
         </div>
         <div className="flex items-center gap-2">
           <IconCalendar className="w-4 h-4" />
@@ -33,7 +35,7 @@ function EducationTab() {
         </div>
         <div className="flex items-center gap-2">
           <IconBook2 className="w-4 h-4" />
-          Courses - Data Structures, Algorithms, Web Technology, Computer Networks, DBMS
+          <div className="w-fit">Courses - Data Structures, Algorithms, Web Technology, Computer Networks, DBMS</div>
         </div>
         <div className="flex items-center gap-2">
           <IconCalendar className="w-4 h-4" />

@@ -13,7 +13,7 @@ export function ProjectCard({
     <div className="w-fit group/card overflow-hidden">
       <div
         className={cn(
-          "border overflow-hidden relative card h-48 rounded-md shadow-xl w-96 backgroundImage flex flex-col justify-between p-4 bg-cover",
+          "border overflow-hidden relative card h-40 lg:h-48 rounded-md shadow-xl w-72 xl:w-96 backgroundImage flex flex-col justify-between p-4 bg-cover",
           imageSrc
         )}
       >

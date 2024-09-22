@@ -71,7 +71,7 @@ export function SkillsCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-7xl h-fit flex flex-row gap-10 p-5 bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-7xl h-[90%] md:h-fit flex flex-col lg:flex-row gap-2 p-2 md:gap-10 md:p-5 bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <div className="flex flex-col justify-center items-center">
                 <motion.div layoutId={`image-${active.title}-${id}`} className="flex items-center">
@@ -81,7 +81,7 @@ export function SkillsCard() {
                     height={200}
                     src={active.src}
                     alt={active.title}
-                    className="h-72 w-auto sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                    className="h-40 md:h-72 w-auto sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                   />
                 </motion.div>
                 <div className="flex justify-between items-start p-4">
@@ -100,7 +100,7 @@ export function SkillsCard() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                  className="text-neutral-600 text-xs md:text-sm lg:text-base h-full md:h-fit flex flex-col items-center gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                 >
                   {typeof active.content === "function" ? active.content() : active.content}
                 </motion.div>
