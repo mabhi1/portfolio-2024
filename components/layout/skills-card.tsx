@@ -3,10 +3,11 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/components/hooks/use-outside-click";
-import LanguagesCard from "./languages-card";
-import DatabasesCard from "./databases-card";
-import WebTechCard from "./web-tech-card";
-import FrameworksCard from "./frameworks-card";
+import languages from "@/lib/constants/languages.json";
+import databases from "@/lib/constants/databases.json";
+import frameworks from "@/lib/constants/frameworks.json";
+import technologies from "@/lib/constants/web-technologies.json";
+import IndividualSkillCard from "./individual-skill-card";
 
 export function SkillsCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(null);
@@ -182,7 +183,7 @@ const cards = [
     content: () => {
       return (
         <div className="h-96 overflow-y-auto">
-          <LanguagesCard />
+          <IndividualSkillCard skills={languages} />
         </div>
       );
     },
@@ -193,7 +194,7 @@ const cards = [
     content: () => {
       return (
         <div className="h-96 overflow-y-auto">
-          <DatabasesCard />
+          <IndividualSkillCard skills={databases} />
         </div>
       );
     },
@@ -205,7 +206,7 @@ const cards = [
     content: () => {
       return (
         <div className="h-96 overflow-y-auto">
-          <WebTechCard />
+          <IndividualSkillCard skills={technologies} />;
         </div>
       );
     },
@@ -216,7 +217,7 @@ const cards = [
     content: () => {
       return (
         <div className="h-96 overflow-y-auto">
-          <FrameworksCard />
+          <IndividualSkillCard skills={frameworks} />
         </div>
       );
     },

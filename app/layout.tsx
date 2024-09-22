@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className={cn("flex flex-col md:flex-row w-full flex-1 overflow-hidden", "h-screen")}>
+          <div className={cn("flex flex-col md:flex-row w-full flex-1 overflow-hidden", "min-h-screen md:h-screen")}>
             <Menu />
-            <main className="w-full max-w-7xl mx-auto px-10 text-sm flex flex-col">
+            <main className="flex-1 w-full max-w-7xl mx-auto md:px-10 text-sm flex flex-col overflow-y-auto">
               {children}
               <Footer />
             </main>

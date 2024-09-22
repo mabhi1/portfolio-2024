@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FlipWords } from "@/components/ui/flip-words";
 import { IconAddressBook, IconBrandGithub, IconBrandLinkedin, IconDownload } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const words = ["Full Stack Engineer", "Software Developer", "Enthusiastic programmer"];
@@ -26,10 +27,12 @@ export default function Home() {
             </div>
           </div>
           <div className="flex gap-2 items-center mt-10">
-            <Button>
-              <IconAddressBook className="w-5 h-5 mr-1" />
-              Contact Me
-            </Button>
+            <Link href="/contact" passHref legacyBehavior>
+              <Button>
+                <IconAddressBook className="w-5 h-5 mr-1" />
+                Contact Me
+              </Button>
+            </Link>
             <Button>
               <IconDownload className="w-5 h-5 mr-1" />
               Download Resume

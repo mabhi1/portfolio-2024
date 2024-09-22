@@ -1,0 +1,114 @@
+{
+  "questionnaire": {
+    "header": {
+      "image": ["/projects/questionnaire.png"],
+      "heading": "A Node.js application",
+      "description": "A question-and-answer based discussion forum for different communities. Users can create or join a community post questions, answer to other questions, comment on other answers. Users can report other questions and answers.",
+      "techstack": ["NodeJS", "ExpressJS", "Handlebars", "Bootstrap", "MongoDB", "Render"],
+      "links": {
+        "code": "https://github.com/mabhi1/cs-546-Questionnaire-",
+        "demo": "https://questionnaire.onrender.com/"
+      }
+    },
+    "body": {
+      "keypoints": [
+        "Log in to post a question for others to answer. The question must be under a community",
+        "Choose an existing community or create a new one for posting a question. Admin of a community is the one who created that community",
+        "A question can also be posted anonymously hiding the poster details",
+        "Browse through all the communitites, all questions and answers under any community on 'all communities' page without logging in",
+        "Subscribe and unsubscribe to a community",
+        "Answer any question in any community",
+        "Upvote, downvote, and report any question or answer in any community",
+        "Comment under any answer of any community",
+        "Admin of a community can see all the reported questions and answers under his community and delete any if he wants to",
+        "Posted questions, posted answers, subscribed communities, and created communities of a user are displayed on the account page"
+      ]
+    }
+  },
+  "safehouse": {
+    "header": {
+      "image": ["/projects/safehouse.png"],
+      "heading": "Fullstack Next.js application",
+      "description": "An application to store passwords, documents, cards, notes, and events. All the confidential details like passwords and credit and debit card details are encrypted and only visible to the user.",
+      "techstack": ["Next.js", "Tailwindcss", "Firebase Storage", "Firebase Auth", "MongoDB", "Prisma", "Vercel"],
+      "links": {
+        "code": "https://github.com/mabhi1/safehouse",
+        "demo": "https://mysafehouse.vercel.app"
+      }
+    },
+    "body": {
+      "keypoints": [
+        "User can login with their credentials and store their important documents, passwords, card details, make notes, and add events",
+        "All the personal information like card details and password are well encrypted and can only be viewed by the respective user",
+        "User can add, edit or delete any of their stored details",
+        "User can search within the all the pages of the application using the search bar",
+        "This application is fully responsive. So, user can be access this application from anywhere in any device",
+        "Use Below Credentials to test the application",
+        "Username - test@test.com",
+        "Password - test123"
+      ]
+    }
+  },
+  "codemystery": {
+    "header": {
+      "image": ["/projects/codemystery.png"],
+      "heading": "A Static Next.js application",
+      "description": "An application with technical puzzles mostly related to web development and coding supposed to be solved only by developers.",
+      "techstack": ["Next.js", "Tailwindcss", "Vercel"],
+      "links": {
+        "code": "https://github.com/mabhi1/code-mystery/",
+        "demo": "https://codemystery.vercel.app/"
+      }
+    },
+    "body": {
+      "keypoints": [
+        "No need to login to use this website",
+        "It contains multiple puzzles to solve",
+        "It can be solved with the basic understanding of web development and DSA",
+        "Some puzzles are linked, and would require hints from other puzzles. Best approach is to go sequentially."
+      ]
+    }
+  },
+  "roomielistings": {
+    "header": {
+      "image": ["/projects/roomielistings.png"],
+      "heading": "Fullstack Next.js application",
+      "description": "A platform to post ads for roommates and rooms. Others can search and go through ads according to their requirements and contact the poster.",
+      "techstack": ["Next.js", "Tailwindcss", "Axios", "Firebase", "Resend", "Zod", "MongoDB", "Vercel", "Prisma"],
+      "links": {
+        "code": "https://github.com/mabhi1/roomie-listings/",
+        "demo": "https://roomielistings.vercel.app/"
+      }
+    },
+    "body": {
+      "keypoints": [
+        "Users can search for roommates or roomies looking for a room for both shared and private",
+        "User need to login to contact for an ad. Browsing can be done without logging in",
+        "User can post ad for roomate or a rental by signing in and filling the respective form",
+        "Search can be sorted and filtered to get more precise results",
+        "A contact form is provided in case of any questions or concerns about the site that goes directly to admin inbox",
+        "Any ad can be reported inappropriate or saved to favourites",
+        "User is provided with a profile section. User can see all the reported and favourite ads in the ptofile section. The profile section can be updated by the user"
+      ]
+    }
+  },
+  "bytecoup": {
+    "header": {
+      "image": ["/projects/bytecoup.png"],
+      "heading": "A Static Next.js application",
+      "description": "A digital portfolio for a web agency that provides multiple services like web and app development.",
+      "techstack": ["Next.js", "Tailwindcss", "Resend", "Zod", "MongoDB", "Vercel", "Prisma"],
+      "links": {
+        "code": "https://github.com/mabhi1/bytecoup/",
+        "demo": "https://bytecoup.vercel.app/"
+      }
+    },
+    "body": {
+      "keypoints": [
+        "This is a simple static portfolio for a web agency",
+        "Multiple sections are provided showcasing the work, about, and services offered by the company",
+        "User can submit the form on contact us page to get in touch with the company"
+      ]
+    }
+  }
+}

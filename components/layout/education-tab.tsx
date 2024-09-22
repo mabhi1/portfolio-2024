@@ -6,24 +6,6 @@ function EducationTab() {
     <div className="space-y-10">
       <div className="space-y-2">
         <div className="flex gap-3 items-end">
-          <Image src="/qualification/aktu.png" width={50} height={50} alt="UPTU" />
-          <div>
-            <div>Bachelor&apos;s in Computer Science</div>
-            <div>AKTU, India</div>
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <IconBook2 className="w-4 h-4" />
-          Courses - Data Structures, Algorithms, Web Technology, Computer Networks, DBMS
-        </div>
-        <div className="flex items-center gap-2">
-          <IconCalendar className="w-4 h-4" />
-          2013 - 2017
-        </div>
-      </div>
-      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-      <div className="space-y-2">
-        <div className="flex gap-3 items-end">
           <Image src="/qualification/stevens.gif" width={50} height={50} alt="Stevens" />
           <div>
             <div>Master&apos;s in Computer Science</div>
@@ -38,6 +20,24 @@ function EducationTab() {
         <div className="flex items-center gap-2">
           <IconCalendar className="w-4 h-4" />
           2021 - 2022
+        </div>
+      </div>
+      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+      <div className="space-y-2">
+        <div className="flex gap-3 items-end">
+          <Image src="/qualification/aktu.png" width={50} height={50} alt="UPTU" />
+          <div>
+            <div>Bachelor&apos;s in Computer Science</div>
+            <div>AKTU, India</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <IconBook2 className="w-4 h-4" />
+          Courses - Data Structures, Algorithms, Web Technology, Computer Networks, DBMS
+        </div>
+        <div className="flex items-center gap-2">
+          <IconCalendar className="w-4 h-4" />
+          2013 - 2017
         </div>
       </div>
     </div>

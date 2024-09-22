@@ -1,0 +1,6 @@
+[
+  { "name": "Javascript", "src": "/technologies/javascript.png" },
+  { "name": "Typescript", "src": "/technologies/typescript.png" },
+  { "name": "Python", "src": "/technologies/python.png" },
+  { "name": "PHP", "src": "/technologies/php.png" }
+]
