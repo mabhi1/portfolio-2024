@@ -9,14 +9,14 @@ type Props = {
 function IndividualProjectPage({ params: { projectId } }: Props) {
   const current = projects[projectId];
   return (
-    <div className="h-full pt-20 flex flex-col gap-5">
-      <div className="flex gap-10">
+    <div className="h-full p-10 md:pt-20 flex flex-col gap-5 overflow-auto">
+      <div className="flex flex-col xl:flex-row gap-10">
         <Image
           src={current.header.image[0]}
           height={600}
           width={600}
           alt={current.header.heading}
-          className="w-auto h-80 border rounded"
+          className="w-auto h-52 lg:h-80 border rounded"
         />
         <div className="flex flex-col items-center gap-5">
           <div className="text-xl">{current.header.heading}</div>
@@ -56,7 +56,7 @@ function IndividualProjectPage({ params: { projectId } }: Props) {
             ))}
           </ul>
         </div>
-        <Image src="/project-page.png" alt="Project" height={200} width={200} />
+        <Image src="/project-page.png" alt="Project" height={200} width={200} className="hidden xl:block" />
       </div>
     </div>
   );

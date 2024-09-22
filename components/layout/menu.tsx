@@ -15,7 +15,7 @@ export function Menu() {
   const [pin, setPin] = useState(true);
   return (
     <Sidebar open={open} setOpen={setOpen} pin={pin}>
-      <SidebarBody className="justify-between gap-10 pl-5">
+      <SidebarBody className="justify-between gap-10 pl-5 h-screen">
         <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
           <div className="h-10 flex flex-col justify-center">
             {open ? <Logo setPin={setPin} setOpen={setOpen} pin={pin} /> : <LogoIcon />}
