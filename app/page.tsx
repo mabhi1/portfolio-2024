@@ -33,10 +33,12 @@ export default function Home() {
                 Contact Me
               </Button>
             </Link>
-            <Button>
-              <IconDownload className="w-5 h-5 mr-1" />
-              Download Resume
-            </Button>
+            <a href="/Resume.pdf" download>
+              <Button>
+                <IconDownload className="w-5 h-5 mr-1" />
+                Download Resume
+              </Button>
+            </a>
           </div>
         </div>
         <Image src="/profile.png" height={270} width={270} alt="Abhishek Mishra" />

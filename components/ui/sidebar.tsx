@@ -174,7 +174,11 @@ export const SidebarLink = ({ link, className, ...props }: { link: Links; classN
 export const ResumeLink = ({ className }: { className?: string }) => {
   const { open, animate } = useSidebar();
   return (
-    <div className={cn("flex items-center justify-start gap-2 group/sidebar py-2 cursor-pointer", className)}>
+    <a
+      className={cn("flex items-center justify-start gap-2 group/sidebar py-2 cursor-pointer", className)}
+      href="/Resume.pdf"
+      target="_blank"
+    >
       <IconFileText className="h-5 w-5 flex-shrink-0" />
       <motion.span
         animate={{
@@ -185,6 +189,6 @@ export const ResumeLink = ({ className }: { className?: string }) => {
       >
         Resume
       </motion.span>
-    </div>
+    </a>
   );
 };
