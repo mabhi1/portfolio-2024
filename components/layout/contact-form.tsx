@@ -33,7 +33,6 @@ export function ContactForm() {
     if (invalidInputs()) return;
     startTransition(async () => {
       try {
-        console.log(executeRecaptcha);
         if (!executeRecaptcha) throw new Error();
         const gReCaptchaToken = await executeRecaptcha("enquiryFormSubmit");
         const api = await fetch("/api/captcha", {
@@ -60,7 +59,6 @@ export function ContactForm() {
         setEmail("");
         setMessage("");
       } catch (error) {
-        console.log(error);
         toast.error("Error in sending email");
       }
     });
@@ -68,7 +66,7 @@ export function ContactForm() {
 
   return (
     <div className="rounded-none md:rounded-2xl">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">Contact Form</h2>
+      <div className="text-xl uppercase">Contact Me</div>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
         Fill and send the form below to send an email
       </p>
