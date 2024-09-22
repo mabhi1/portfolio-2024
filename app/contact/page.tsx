@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function ContactPage() {
   return (
-    <div className="h-full flex flex-col-reverse lg:flex-row justify-center items-center gap-10 md:gap-36 py-10 md:p-10 w-full mx-auto">
+    <div className="h-full flex flex-col-reverse lg:flex-row justify-center gap-10 md:gap-36 py-10 md:p-10 w-full mx-auto">
       <div className="flex flex-col gap-2 text-sm w-96 items-center">
         <Image src="/contact.png" height={975} width={1000} alt="Contact Form" className="w-60 md:w-72 h-auto" />
         <div className="text-xs flex space-x-2 items-center justify-between px-4 w-3/4 md:w-full rounded-md h-10 font-medium shadow-input bg-white dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]">
