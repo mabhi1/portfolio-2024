@@ -1,34 +1,34 @@
 [
   {
-    "imageSrc": "bg-[url(/projects/questionnaire.png)]",
+    "imageSrc": "/projects/questionnaire.png",
     "title": "Questionnaire",
     "description": "A question-and-answer based discussion forum",
     "demoLink": "https://questionnaire.onrender.com/",
     "knowMoreLink": "/projects/questionnaire"
   },
   {
-    "imageSrc": "bg-[url(/projects/safehouse.png)]",
+    "imageSrc": "/projects/safehouse.png",
     "title": "Safehouse",
     "description": "A vault for storing personal stuff",
     "demoLink": "https://mysafehouse.vercel.app/",
     "knowMoreLink": "/projects/safehouse"
   },
   {
-    "imageSrc": "bg-[url(/projects/codemystery.png)]",
+    "imageSrc": "/projects/codemystery.png",
     "title": "Code Mystery",
     "description": "Technical puzzles for developers only",
     "demoLink": "https://codemystery.vercel.app/",
     "knowMoreLink": "/projects/codemystery"
   },
   {
-    "imageSrc": "bg-[url(/projects/roomielistings.png)]",
+    "imageSrc": "/projects/roomielistings.png",
     "title": "Roomie Listings",
     "description": "A platform to search for rooms",
     "demoLink": "https://roomielistings.vercel.app/",
     "knowMoreLink": "/projects/roomielistings"
   },
   {
-    "imageSrc": "bg-[url(/projects/bytecoup.png)]",
+    "imageSrc": "/projects/bytecoup.png",
     "title": "Bytecoup",
     "description": "An agency portfolio providing web services",
     "demoLink": "https://bytecoup.vercel.app/",

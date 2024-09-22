@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { IconExternalLink, IconTextPlus } from "@tabler/icons-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function ProjectCard({
@@ -13,10 +14,10 @@ export function ProjectCard({
     <div className="w-fit group/card overflow-hidden">
       <div
         className={cn(
-          "border overflow-hidden relative card h-40 lg:h-48 rounded-md shadow-xl w-72 xl:w-96 backgroundImage flex flex-col justify-between p-4 bg-cover",
-          imageSrc
+          "relative border overflow-hidden relative card h-40 rounded-md shadow-xl w-80 backgroundImage flex flex-col justify-between p-4 bg-cover",
         )}
       >
+        <Image src={imageSrc} width={1200} height={1000} alt={title} className="absolute top-0 left-0 w-full h-full"/>
         <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
         <div className="group-hover/card:flex flex-row items-center space-x-4 z-10 hidden">
           <div className="flex flex-col">

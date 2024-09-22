@@ -5,7 +5,7 @@ function WorkTab() {
     <div className="space-y-10">
       <div className="space-y-2">
         <div className="flex gap-3 items-center">
-          <Image src="/qualification/chase.png" width={50} height={50} alt="Chase" />
+          <Image src="/qualification/chase.png" width={50} height={50} alt="Chase" className="rounded-full"/>
           <div>
             <div>Software Developer</div>
             <div>JPMorgan Chase, United States</div>
@@ -45,7 +45,7 @@ function WorkTab() {
       <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       <div className="space-y-2">
         <div className="flex gap-3 items-center">
-          <Image src="/qualification/stevens.gif" width={50} height={50} alt="Stevens" />
+          <Image src="/qualification/stevens.gif" width={50} height={50} alt="Stevens" className="rounded-full" />
           <div>
             <div>Teaching Assistant</div>
             <div>Stevens Institute of Technology, United States</div>

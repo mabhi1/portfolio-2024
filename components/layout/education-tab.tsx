@@ -6,7 +6,7 @@ function EducationTab() {
     <div className="space-y-10">
       <div className="space-y-2">
         <div className="flex gap-3 items-end">
-          <Image src="/qualification/stevens.gif" width={50} height={50} alt="Stevens" />
+          <Image src="/qualification/stevens.gif" width={50} height={50} alt="Stevens" className="rounded-full"/>
           <div>
             <div>Master&apos;s in Computer Science</div>
             <div>Stevens, India</div>
@@ -27,7 +27,7 @@ function EducationTab() {
       <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       <div className="space-y-2">
         <div className="flex gap-3 items-end">
-          <Image src="/qualification/aktu.png" width={50} height={50} alt="UPTU" />
+          <Image src="/qualification/aktu.png" width={50} height={50} alt="UPTU" className="rounded-full" />
           <div>
             <div>Bachelor&apos;s in Computer Science</div>
             <div>AKTU, India</div>

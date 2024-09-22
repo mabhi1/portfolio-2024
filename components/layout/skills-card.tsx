@@ -124,7 +124,7 @@ export function SkillsCard() {
                   height={200}
                   src={card.src}
                   alt={card.title}
-                  className="w-auto h-52 rounded-lg object-cover object-top"
+                  className="w-auto h-40 rounded-lg object-cover object-top"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">

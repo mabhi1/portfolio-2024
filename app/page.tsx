@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const words = ["Full Stack Engineer", "Software Developer", "Enthusiastic programmer"];
+  const words = ["Full Stack Engineer", "Software Developer", "Enthusiastic Coder"];
   return (
     <BackgroundBeamsWithCollision>
       <div className="mx-auto w-fit flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 items-center">
@@ -22,7 +22,7 @@ export default function Home() {
             </div>
             <div>
               <div className="px-2 text-xl">Hello, my name is</div>
-              <div className="text-3xl lg:text-5xl px-2">Abhishek Mishra</div>
+              <div className="text-2xl lg:text-5xl px-2">Abhishek Mishra</div>
               <FlipWords words={words} />
             </div>
           </div>

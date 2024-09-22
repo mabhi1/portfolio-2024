@@ -25,8 +25,8 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className={cn("flex flex-col md:flex-row w-full flex-1 overflow-hidden", "min-h-screen md:h-screen")}>
             <Menu />
-            <main className="flex-1 w-full max-w-7xl mx-auto md:px-10 text-sm flex flex-col overflow-y-auto">
-              {children}
+            <main className="flex-1 w-full md:px-10 lg:px-0 text-sm flex flex-col">
+              <div className="flex-1 px-10 overflow-auto w-full flex">{children}</div>
               <Footer />
             </main>
           </div>

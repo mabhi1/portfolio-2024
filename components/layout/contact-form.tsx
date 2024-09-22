@@ -67,7 +67,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="rounded-none md:rounded-2xl bg-white dark:bg-black">
+    <div className="rounded-none md:rounded-2xl">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">Contact Form</h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
         Fill and send the form below to send an email

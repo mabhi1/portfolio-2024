@@ -27,7 +27,7 @@ export function QualificationTabs() {
   ];
 
   return (
-    <div className="h-[35rem] lg:h-[40rem] [perspective:1000px] relative b flex flex-col mx-auto w-full items-start justify-start">
+    <div className="h-[35rem] lg:h-[28rem] [perspective:1000px] relative b flex flex-col mx-auto w-full items-start justify-start">
       <Tabs tabs={tabs} />
     </div>
   );
