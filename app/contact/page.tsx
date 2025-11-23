@@ -16,7 +16,7 @@ function ContactPage() {
             <IconPhoneCall className="w-4 h-4" />
             <span>Call Me</span>
           </div>
-          <div className="ml-5">+1-201-238-8847</div>
+          <div className="ml-5">+91-7800074728</div>
         </div>
         <div className="text-xs flex space-x-2 items-center justify-between px-4 w-full rounded-md h-10 font-medium shadow-input bg-white dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]">
           <div className="flex gap-2 items-center">
@@ -30,7 +30,7 @@ function ContactPage() {
             <IconLocation className="w-4 h-4" />
             <span>Location</span>
           </div>
-          <div className="ml-5">United States</div>
+          <div className="ml-5">India</div>
         </div>
       </div>
     </div>

@@ -199,14 +199,13 @@ const cards = [
       );
     },
   },
-
   {
     title: "Web Technologies",
     src: "/web-tech.png",
     content: () => {
       return (
         <div className="h-96 overflow-y-auto">
-          <IndividualSkillCard skills={technologies} />;
+          <IndividualSkillCard skills={technologies} />
         </div>
       );
     },

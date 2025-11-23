@@ -5,11 +5,31 @@ function WorkTab() {
     <div className="space-y-10">
       <div className="space-y-2">
         <div className="flex gap-3 items-center">
+          <Image src="/qualification/global-logic.jpeg" width={50} height={50} alt="Global Logic" className="rounded-full"/>
+          <div>
+            <div>Senior Software Developer</div>
+            <div>Global Logic, India</div>
+            <div>2025 - Present</div>
+          </div>
+        </div>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Built responsive micro-frontend applications using React.js, TypeScript, and SASS, delivering scalable UI experiences for valuation and analytics platforms.</li>
+          <li>Integrated GraphQL APIs and Axios-based services to enable real-time data retrieval and dynamic visualization of asset valuation insights.</li>
+          <li>Contributed to full-stack development by implementing backend modules in Nest.js, including controllers, DTOs, and data-access layers following clean architecture principles.</li>
+          <li>Authored and optimized SQL queries to support analytical and operational workflows across the platform.</li>
+          <li>Ensured high code quality through Jest unit testing, Zod schema validation, and automated linting/formatting with ESLint and Prettier.</li>
+          <li>Improved monorepo efficiency by optimizing shared libraries and dependency management using Lerna within a scalable modular architecture.</li>
+          <li>Collaborated cross-functionally to build reusable UI components, enhance performance, and maintain development best practices for consistent delivery.</li>
+        </ul>
+      </div>
+      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+      <div className="space-y-2">
+        <div className="flex gap-3 items-center">
           <Image src="/qualification/chase.png" width={50} height={50} alt="Chase" className="rounded-full"/>
           <div>
             <div>Software Developer</div>
             <div>JPMorgan Chase, United States</div>
-            <div>2023 - Present</div>
+            <div>2023 - 2025</div>
           </div>
         </div>
         <ul className="list-disc list-inside space-y-1">
