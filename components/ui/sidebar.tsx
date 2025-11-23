@@ -86,7 +86,7 @@ export const DesktopSidebar = ({ className, children, ...props }: React.Componen
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden md:flex md:flex-col bg-gradient-to-r from-blue-900 to-white from-2% to-98% dark:from-neutral-800 dark:to-neutral-800 text-white w-[300px] flex-shrink-0",
+          "h-full px-4 py-4 hidden md:flex md:flex-col bg-gradient-to-r from-blue-200 to-white from-2% to-98% dark:from-neutral-800 dark:to-neutral-800 text-black dark:text-white w-[300px] flex-shrink-0",
           className
         )}
         animate={{
@@ -140,7 +140,7 @@ export const MobileSidebar = ({ className, children, ...props }: React.Component
               <div className="absolute right-3 top-2 z-50" onClick={() => setOpen(!open)}>
                 <IconX />
               </div>
-              <div onClick={() => setOpen(false)}>{children}</div>
+              <div className="h-screen flex flex-col justify-between" onClick={() => setOpen(false)}>{children}</div>
             </motion.div>
           )}
         </AnimatePresence>
